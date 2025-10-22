@@ -20,11 +20,6 @@
             android:name=".CameraXapp"
             android:exported="false" />
         <activity
-            android:name=".cameraX"
-            android:exported="false"
-            android:label="@string/title_activity_camera_x"
-            android:theme="@style/Theme.UNIsuki" />
-        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
