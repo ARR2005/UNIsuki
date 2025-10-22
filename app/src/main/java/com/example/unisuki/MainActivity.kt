@@ -40,6 +40,19 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
+fun Name() {
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Integer() {
+
+}
+
+
+@Preview(showBackground = true)
+@Composable
 fun GreetingPreview() {
     UNIsukiTheme {
         Greeting("Android")

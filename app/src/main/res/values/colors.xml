@@ -6,5 +6,14 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="slate100">#e9ecef</color>
+    <color name="slate200">#dee2e6</color>
+    <color name="slate300">#ced4da</color>
+    <color name="slate400">#adb5bd</color>
+    <color name="slate500">#6c757d</color>
+    <color name="slate600">#495057</color>
+    <color name="slate700">#343a40</color>
+    <color name="slate800">#212529</color>
+
 </resources>
