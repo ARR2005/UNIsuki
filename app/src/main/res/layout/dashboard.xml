@@ -31,7 +31,7 @@
                     android:layout_width="94dp"
                     android:layout_height="64dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/logoText" />
+                    app:srcCompat="@drawable/brandtext" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -58,22 +58,54 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:orientation="vertical"
-                android:layout_marginStart="20dp">
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
 
-
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button_with_icon4"
+                <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#FFFFFF"
-                    android:text="Menu"
-                    app:icon="@drawable/shopfill_bug"
-                    app:iconGravity="start"
-                    tools:ignore="HardcodedText" />
+                    android:layout_weight="1"
+                    android:text="Explore Categories"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:textColor="@color/slate800"
+                    android:textSize="14sp"/>
+
             </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+                    app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
