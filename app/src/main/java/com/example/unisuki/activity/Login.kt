@@ -1,6 +1,5 @@
-package com.example.unisuki
+package com.example.unisuki.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -71,10 +70,7 @@ class LoginActivity : AppCompatActivity() {
                         // Password matches!
                         Toast.makeText(baseContext, "Login Successful!", Toast.LENGTH_SHORT).show()
 
-                        // TODO: Navigate to your app's main screen
-                        // val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                        // startActivity(intent)
-                        // finish() // Close the login activity
+
 
                     } else {
                         // Password does not match
