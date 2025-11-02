@@ -1,0 +1,9 @@
+<!-- res/drawable/custom_input_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+    <corners android:radius="25dp" />
+    <stroke
+        android:width="2dp"
+        android:color="#000000" /> <!-- A light gray color for the border -->
+</shape>

@@ -24,33 +24,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UNIsuki">
-
         <activity
-            android:name=".activity.Dashboard"
-            android:exported="false" />
-        <activity
-            android:name=".activity.CameraXapp"
-            android:exported="false" />
-        <activity
-            android:name=".cameraX"
-            android:exported="false"
-            android:label="@string/title_activity_camera_x"
-            android:theme="@style/Theme.UNIsuki" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.UNIsuki">
+        android:name=".activity.Splashscreen"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.UNIsuki">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".activity.Signup"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Login"
+            android:exported="false" />
+        <activity
+        android:name=".activity.Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CameraXapp"
+            android:exported="false" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
