@@ -1,4 +1,4 @@
-package com.example.test_unisuki.auth
+package com.example.unisuki.auth
 
 class auth {
     var name: String = ""

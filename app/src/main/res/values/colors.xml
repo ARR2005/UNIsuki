@@ -15,5 +15,6 @@
     <color name="slate600">#495057</color>
     <color name="slate700">#343a40</color>
     <color name="slate800">#212529</color>
-
+    <color name="warning">#BF092F</color>
+    <color name="green">#A3B087</color>
 </resources>

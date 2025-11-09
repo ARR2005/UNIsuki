@@ -3,25 +3,30 @@ package com.example.unisuki.activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.unisuki.R
-import com.example.unisuki.helper.Auth
+import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.example.test_unisuki.auth.auth
 
-class Signup : AppCompatActivity() {
+
+class signup : AppCompatActivity() {
 
     private lateinit var signupEmail: EditText
     private lateinit var signupIdNumber: EditText
     private lateinit var signupPassword: EditText
     private lateinit var signupRepassword: EditText
-    private lateinit var signupButton: com.google.android.material.button.MaterialButton
+    private lateinit var signupButton: MaterialButton
+    private lateinit var loginTextView: TextView
+
     private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup)
+        setContentView(R.layout.activity_signup)
 
         // Initialize views
         signupEmail = findViewById(R.id.email)
@@ -29,10 +34,13 @@ class Signup : AppCompatActivity() {
         signupPassword = findViewById(R.id.password)
         signupRepassword = findViewById(R.id.repassword)
         signupButton = findViewById(R.id.btn_signup)
+        loginTextView = findViewById(R.id.tv_signup)
+
+
 
         // This is the recreated Kotlin click listener
         signupButton.setOnClickListener {
-             // Get the text from the EditText fields
+            // Get the text from the EditText fields
             val email = signupEmail.text.toString()
             val idNumber = signupIdNumber.text.toString()
             val password = signupPassword.text.toString()
@@ -53,7 +61,7 @@ class Signup : AppCompatActivity() {
             database = FirebaseDatabase.getInstance().getReference("Users")
 
             // Create an instance of your Auth data class (replaces HelperClass)
-            val user = Auth(email, idNumber, password, repassword)
+            val user = auth(email, idNumber, password, repassword)
 
             // Upload the user object to Firebase using the ID number as the unique key
             database.child(idNumber).setValue(user).addOnSuccessListener {
@@ -61,7 +69,7 @@ class Signup : AppCompatActivity() {
                 Toast.makeText(this, "Signed up successfully!", Toast.LENGTH_SHORT).show()
 
                 // Navigate to the Login screen
-                val intent = Intent(this, Login::class.java)
+                val intent = Intent(this, login::class.java)
                 startActivity(intent)
                 finish() // Finish signup so the user can't go back
 
@@ -69,6 +77,13 @@ class Signup : AppCompatActivity() {
                 // If it fails, show an error message
                 Toast.makeText(this, "Signup failed: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
+
+
+        }
+
+        loginTextView.setOnClickListener {
+            val intent = Intent(this, login::class.java)
+            startActivity(intent)
         }
     }
 }
