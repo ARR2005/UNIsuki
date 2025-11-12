@@ -42,7 +42,6 @@
                 android:textStyle="bold"
                 tools:ignore="HardcodedText"/>
 
-            <!-- This can be part of a larger layout file, like your signup.xml -->
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="320dp"

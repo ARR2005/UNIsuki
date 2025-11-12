@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA.any" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.TEST_UNISUKI">
         <activity
+            android:name=".activity.post"
+            android:exported="false" />
+        <activity
+            android:name=".activity.camera"
+            android:exported="false" />
+        <activity
             android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
@@ -19,7 +29,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.login"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".activity.splashScreen"
             android:exported="true">
