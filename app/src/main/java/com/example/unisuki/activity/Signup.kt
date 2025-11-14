@@ -49,32 +49,25 @@ class signup : AppCompatActivity() {
             // --- Basic Validation ---
             if (email.isEmpty() || idNumber.isEmpty() || password.isEmpty() || repassword.isEmpty()) {
                 Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener // Stop the execution if fields are empty
+                return@setOnClickListener
             }
-
             if (password != repassword) {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener // Stop if passwords don't match
+                return@setOnClickListener
             }
-
-            // Get a reference to the 'Users' node in your Firebase database
             database = FirebaseDatabase.getInstance().getReference("Users")
 
-            // Create an instance of your Auth data class (replaces HelperClass)
             val user = auth(email, idNumber, password, repassword)
 
-            // Upload the user object to Firebase using the ID number as the unique key
             database.child(idNumber).setValue(user).addOnSuccessListener {
-                // When successful:
                 Toast.makeText(this, "Signed up successfully!", Toast.LENGTH_SHORT).show()
 
-                // Navigate to the Login screen
                 val intent = Intent(this, login::class.java)
                 startActivity(intent)
-                finish() // Finish signup so the user can't go back
+                finish()
 
             }.addOnFailureListener { exception ->
-                // If it fails, show an error message
+
                 Toast.makeText(this, "Signup failed: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
 

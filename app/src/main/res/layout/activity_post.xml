@@ -43,25 +43,24 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- 3. FrameLayout to hold the image and its border -->
             <FrameLayout
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/dotted_border"> <!-- Custom border drawable -->
+                android:background="@drawable/dotted_border">
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:scaleType="centerCrop"
-                    android:src="@color/teal_200" />
+                    android:layout_margin="4dp"
+                    android:src="@color/slate800" />
+
+
             </FrameLayout>
 
-            <!-- 4. Rest of your form fields (Existing) -->
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -108,15 +107,6 @@
                     android:textColor="@android:color/black"
                     app:strokeColor="@android:color/darker_gray" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnStock"
-                    style="?attr/materialButtonOutlinedStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Stock"
-                    android:textColor="@android:color/black"
-                    app:strokeColor="@android:color/darker_gray" />
             </LinearLayout>
 
             <!-- 6. Price Input Field -->
@@ -137,15 +127,6 @@
             <!-- 7. Delivery Method Spinner -->
 
             <!-- 8. Description (Moved from above for correct order) -->
-
-            <Spinner
-                android:id="@+id/spinnerDelivery"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/spinner_background"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp" />
 
             <TextView
                 android:id="@+id/textViewDescription"

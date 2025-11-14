@@ -1,9 +1,9 @@
 package com.example.test_unisuki.model
 
 data class Category(
-    val id: String = "",
-    val title: String = "",
-    val picUrl: String = ""
+    private var id: String = "",
+    private var title: String = "",
+    private var image: String = ""
 )
 
 
